@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin:100px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.qator{
+    display:flex;
+    align-items:flex-start;
+    gap:40px;
+}
+
+.qator label{
+    width:160px;
+    font-size:16px;
+}
+
+form span{
+    color:red;
+}
+
+.qator_inp{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qator_inp.column{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+input{
+    width:500px;
+    height:40px;
+    border:1px solid #bab2b2;
+    border-radius:5px;
+    padding:0 10px;
+    color:#666;
+}
+
+button{
+    width:120px;
+    height:40px;
+    background-color:rgb(201,192,192);
+    font-weight:bold;
+    color:#302e2e;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:black;
+    color:white;
+    transition:0.3s;
+}
+
+.qator_inp p{
+    margin-top:8px;
+    font-size:15px;
+    color:#666;
+    line-height:22px;
+}
+
+hr{
+    border:1px solid #dcb561;
+}
+
+.qator_rasm{
+    width:120px;
+    height:170px;
+    border:1px solid #bab2b2;
+    border-radius:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.royhat_btn {
+    background-color: #639ceb;
+    color: white;
+}
+
+
+
+
+.sana {
+    display: flex;
+    gap: 10px;
+}
+
+.sana select {
+    width: 200px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    color: grey;
+}
+
+.tel_raqam {
+    display: flex;
+    gap: 10px;
+}
+
+.tel_raqam select,
+.tel_raqam input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+    color: grey;
+}
+
+
+.tel_raqam select {
+    width: 200px;
+}
+
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.radio input {
+   width: 15px;
+}
+
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn_style {
+    width: 300px;
+    background: #5da2d5;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn_style:hover {
+    background-color: black;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+    <form>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>ID (E-mail)</label>
+            <div class="qator_inp">
+                <input type="email" placeholder="E-mail manzilini kiriting">
+                <button type="button">Tasdiqlash</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>Parol</label>
+            <div class="qator_inp column">
+                <input type="password" placeholder="Parolni kiriting">
+                <p>
+                    ※ Parol kamida 3 xil belgidan iborat bo‘lib (harflar, raqamlar, maxsus belgilar), kamida 8 ta belgidan iborat bo'lishi yoki 2 xil belgidan iborat <br>bo‘lib 10 ta yoki undan ortiq belgidan iborat bo‘lishi kerak.
+                <br>
+                    Ruxsat etilgan maxsus belgilar: ! @ # $ % ^ & + =
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="qator">
+            <label><span>*</span>Parolni tasdiqlash</label>
+            <div class="qator_inp column">
+                <input type="password" placeholder="Parolni kiriting">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>Familiya</label>
+            <div class="qator_inp column">
+                <input type="text" placeholder="Pasportdagi inglizcha familiya">
+                <p>Kiritayotganda inglizcha bosh harflardan foydalaning va pasport yoki boshqa rasmiy hujjatdagi ismingizni aniq yozing.</p>
+                <p>ФИО (фамилия, исм) тўлиқ кўрсатилиши керак, аммо паспорт ва бошқа расмий ҳужжатлардаги ФИОни <br>аниқ кўрсатиш принципи бўйича.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>Ism</label>
+            <div class="qator_inp column">
+                <input type="text" placeholder="Pasportdagi inglizcha ism">
+                <p>Kiritayotganda inglizcha bosh harflardan foydalaning va pasport yoki boshqa rasmiy hujjatdagi ismingizni aniq yozing.</p>
+                <p>O‘rtacha ism (middle name)ni ism (first name) qismida bo‘sh joy bilan ajratib yozing.</p>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="qator">
+            <label><span>*</span>Rasm</label>
+            <div class="qator_inp row">
+                <div class="qator_rasm">
+                    <img src="#" alt="Rasm" width="100">
+                </div>
+
+                <input type="file" id="fileInput" style="display: none;">
+
+                <button class="royhat_btn" type="button" onclick="document.getElementById('fileInput').click()">
+                    Ro'yhatga olish
+                </button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>Tug'ilgan sana</label>
+            <div class="qator_inp sana">
+                
+                <select name="year">
+                    <option>Tanlash</option>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2010</option>
+                    <option>2005</option>
+                    <option>2000</option>
+                    <option>1995</option>
+                    <option>1990</option>
+                    <option>1985</option>
+                    <option>1980</option>
+                    <option>1975</option>
+                    <option>1970</option>
+                </select>
+
+                <select name="month">
+                    <option>Tanlash</option>
+                    <option value="1">Yanvar</option>
+                    <option value="2">Fevral</option>
+                    <option value="3">Mart</option>
+                    <option value="4">Aprel</option>
+                    <option value="5">May</option>
+                    <option value="6">Iyun</option>
+                    <option value="7">Iyul</option>
+                    <option value="8">Avgust</option>
+                    <option value="9">Sentabr</option>
+                    <option value="10">Oktabr</option>
+                    <option value="11">Noyabr</option>
+                    <option value="12">Dekabr</option>
+                </select>
+
+                <select name="day">
+                    <option>Tanlash</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label><span>*</span>Mobil telefon</label>
+
+            <div class="tel_raqam">
+                <select name="davlat_raqam">
+                    <option>Tanlash</option>
+                    <option value="+998">🇺🇿 Uzbekistan (+998)</option>
+                    <option value="+7">🇷🇺 Russia (+7)</option>
+                    <option value="+1">🇺🇸 USA (+1)</option>
+                    <option value="+90">🇹🇷 Turkey (+90)</option>
+                    <option value="+82">🇰🇷 South Korea (+82)</option>
+                    <option value="+81">🇯🇵 Japan (+81)</option>
+                    <option value="+49">🇩🇪 Germany (+49)</option>
+                    <option value="+33">🇫🇷 France (+33)</option>
+                    <option value="+39">🇮🇹 Italy (+39)</option>
+                    <option value="+44">🇬🇧 UK (+44)</option>
+                    <option value="+971">🇦🇪 UAE (+971)</option>
+                    <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+                    <option value="+86">🇨🇳 China (+86)</option>
+                    <option value="+91">🇮🇳 India (+91)</option>
+                    <option value="+380">🇺🇦 Ukraine (+380)</option>
+                    <option value="+61">🇦🇺 Australia (+61)</option>
+                    <option value="+55">🇧🇷 Brazil (+55)</option>
+                    <option value="+34">🇪🇸 Spain (+34)</option>
+                    <option value="+31">🇳🇱 Netherlands (+31)</option>
+                    <option value="+46">🇸🇪 Sweden (+46)</option>
+                    <option value="+41">🇨🇭 Switzerland (+41)</option>
+                    <option value="+48">🇵🇱 Poland (+48)</option>
+                    <option value="+32">🇧🇪 Belgium (+32)</option>
+                    <option value="+45">🇩🇰 Denmark (+45)</option>
+                    <option value="+47">🇳🇴 Norway (+47)</option>
+                    <option value="+358">🇫🇮 Finland (+358)</option>
+                    <option value="+420">🇨🇿 Czech (+420)</option>
+                    <option value="+36">🇭🇺 Hungary (+36)</option>
+                    <option value="+40">🇷🇴 Romania (+40)</option>
+                    <option value="+351">🇵🇹 Portugal (+351)</option>
+                    <option value="+30">🇬🇷 Greece (+30)</option>
+                    <option value="+994">🇦🇿 Azerbaijan (+994)</option>
+                    <option value="+995">🇬🇪 Georgia (+995)</option>
+                    <option value="+374">🇦🇲 Armenia (+374)</option>
+                    <option value="+62">🇮🇩 Indonesia (+62)</option>
+                    <option value="+60">🇲🇾 Malaysia (+60)</option>
+                    <option value="+65">🇸🇬 Singapore (+65)</option>
+                    <option value="+66">🇹🇭 Thailand (+66)</option>
+                    <option value="+84">🇻🇳 Vietnam (+84)</option>
+                    <option value="+92">🇵🇰 Pakistan (+92)</option>
+                    <option value="+880">🇧🇩 Bangladesh (+880)</option>
+                    <option value="+20">🇪🇬 Egypt (+20)</option>
+                    <option value="+27">🇿🇦 South Africa (+27)</option>
+                    <option value="+254">🇰🇪 Kenya (+254)</option>
+                    <option value="+234">🇳🇬 Nigeria (+234)</option>
+                    <option value="+212">🇲🇦 Morocco (+212)</option>
+                    <option value="+972">🇮🇱 Israel (+972)</option>
+                    <option value="+93">🇦🇫 Afghanistan (+93)</option>
+                    <option value="+64">🇳🇿 New Zealand (+64)</option>
+                </select>
+
+                <input type="number" name="phone" placeholder="Telefon raqamnini kiriting">
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="qator">
+            <label>
+                <span>*</span>E-mail xabarlarni qabul qilish holati
+            </label>
+
+            <div>
+                <div class="qator_inp">
+                    <label class="radio">
+                        <input type="radio" name="email_notifications" value="yes">
+                        <span>Ha</span>
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="email_notifications" value="no" checked>
+                        <span>Yo‘q</span>
+                    </label>
+                </div>
+                <p style="color: grey; font-size: 14px; line-height: 20px;">
+                    Agar Yo‘q belgilanganda, elektron pochta orqali xabarnomalar olinmaydi 
+                    va baholash bilan bog‘liq <br>e’lonlarni olish imkoniyatingiz cheklanishi mumkin.
+                </p>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <div class="qator">
+            <div class="qator_inp btn-center">
+                <button type="submit" class="btn_style">
+                    Ro‘yxatdan o‘tish uchun ariza
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+</html>
